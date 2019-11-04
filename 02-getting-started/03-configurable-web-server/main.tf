@@ -36,3 +36,9 @@ resource "aws_security_group" "instance" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
+
+
+output "public_ip" {
+  value       = aws_instance.fusion.public_ip
+  description = "The public IP address of the web server"
+}
